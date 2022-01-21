@@ -1,0 +1,23 @@
+ALGORITHM sentence
+VAR
+ nc,nv,ne:INTEGER;
+ c:CHAR;
+ str:STRING;
+BEGIN
+nc:=0;ne:=0;nv:=0 ;str:="";
+REPEAT
+read(c); 
+IF (c in ['a','e', 'i' ,'o', 'u', 'y']) THEN nv=nv+1;
+    
+END_IF 
+  IF (c!="") THEN
+      ne=ne+1;
+  ELSE
+      nc=nc+1;
+  END_IF
+UNTIL (c=".")
+write (str);
+write (" number of vowels :",nv);
+write ("number of words :",ne);
+write (" number of characters:" , nc);
+END
